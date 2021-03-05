@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+/* - Dark Blue: hsl(240, 38%, 20%)
+- Grayish Blue: hsl(240, 18%, 77%) */
+
+:root {
+  --font-Inter: 'Inter', sans-serif;
+  --dark-Blue: hsl(240, 38%, 20%);
+  --grayish-Blue: hsl(240, 18%, 77%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/pattern-curve.svg') no-repeat left bottom, url('../images/pattern-bg.svg') no-repeat 80%;
+}
+
+.profile-image {
+  width: 540px;
+  height: 540px;
+  background: url('../images/image-john.jpg') no-repeat;
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+  box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.19);
+}
+
+.profile-quote {
+  font-family: var(--font-Inter);
+  font-weight: 300;
+  color: var(--dark-Blue);
+  font-size: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 8.5%;
+  transform: translateY(-50%);
+  width: 45vw;
+}
+
+.pattern-quotes {
+  position: absolute;
+  left: 15%;
+  top: 25%;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--dark-Blue);
+  z-index: 5;
+}
+
+.profession {
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--grayish-Blue);
+  z-index: 5;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/pattern-curve.svg') no-repeat bottom, url('../images/pattern-bg.svg') no-repeat;
+    background-size: contain;
+  }
+
+  .profile-image {
+    width: 300px;
+    height: 300px;
+    background: url('../images/image-john.jpg') no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    box-shadow: 0 15px 20px 5px rgba(0, 0, 0, 0.19);
+  }
+
+  .pattern-quotes {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .pattern-quotes > img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .profile-quote {
+    font-family: var(--font-Inter);
+    font-weight: 300;
+    color: var(--dark-Blue);
+    font-size: 16px;
+    position: absolute;
+    top: 75%;
+    width: 290px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-Blue);
+    z-index: 5;
+  }
+
+  .profession {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--grayish-Blue);
+    z-index: 5;
+  }
+}
